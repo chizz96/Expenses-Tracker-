@@ -1,8 +1,12 @@
 const express = require("express")
 
-const { AllExpense } = require("../controller/expense.controller.js")
+const { AllExpense,viewOneexpense } = require("../controller/expense.controller.js")
 
 const router = express.Router()
 
 router.get("/Expense", AllExpense)
 
+router.get("/Expense/:id", viewOneexpense)
+
+
+module.exports=router
