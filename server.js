@@ -1,7 +1,6 @@
 const express = require("express")
 const router = require("./router/expense.router.js")
-const dotenv = require("dotenv")
-dotenv.config()
+
 
 const app = express()
 app.use(express.json())
