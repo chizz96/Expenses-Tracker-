@@ -1,11 +1,13 @@
 const express = require("express")
-const dotenv = require("dotenv")
-dotenv.config()
+const router = require("./router/expense.router.js")
+
 
 const app = express()
 app.use(express.json())
 
-const port = process.env.PORT
+app.use(router)
+
+const port = 3000
 
 app.listen(port, ()=>{
     console.log(`Server is runing on Port: ${port}`)
