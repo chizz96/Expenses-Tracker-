@@ -38,4 +38,17 @@ npm install Or npm i
 Run the project
 npm run dev
 
+Team members
+1. Emmanuel Johnson
+2. Chisom Peculiar Nwachukwu
+3. Oladipupo Hadi 
+4. Ugonna Chidubem
+
+Github user name
+emmanueljohnson503-tech
+chizz96
+OLADIPUPO802
+chidubem-dev
+
+
 Built as a backend development learning project.
