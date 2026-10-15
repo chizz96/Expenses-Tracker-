@@ -36,9 +36,20 @@ const viewOneexpense = (req, res) => {
     });
 }
 
+const deleteOneexpense = async(req, res)=>{
+    const id = Number(req.params.id)
+    const userIndex =  expenseDb.findIndex((user)=> user.id === id)
 
+    if (userIndex === -1){
+        res.status(404).json({message:"user not found"})
+    }
 
+    expenseDb.splice(userIndex, 1)
+    await savetoDb(JSON.stringify(expenseDb, null , 2))
+    res.status(200).json({message: "Expense deleted successfully"})
+}
 module.exports = {
     AllExpense,
     viewOneexpense,
+    deleteOneexpense,
 }
